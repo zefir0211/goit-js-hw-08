@@ -24,7 +24,8 @@ const fillFormFields = () => {
   }
 };
 
-const handleSubmit = () => {
+const handleSubmit = (event) => {
+  event.preventDefault();
   storage.removeItem('feedback-form-state');
   emailInput.value = '';
   messageInput.value = '';
